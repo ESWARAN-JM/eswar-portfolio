@@ -1,0 +1,121 @@
+#about{
+    position: relative;
+    margin-top: 60px;
+}
+#about .section__wrapper{
+    display: grid;
+    grid-template-columns: 300px auto;
+    gap: 40px;
+    border-radius: 20px;
+    position: relative;
+}
+#about .hole{ 
+    position: absolute;
+    top: -100px;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+#about .description
+  {
+    margin-top: 20px;
+}
+#about .right-column{
+    padding: 100px 0px;
+}
+#about .column{
+    position: relative;
+}
+
+#about .skills__container{
+    max-width: 300px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+    top: 70px;
+}
+#about .skill__group{
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap:wrap;
+}
+#about .skill{
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    margin: 2px;
+    position: relative;
+    left: 10px;
+    bottom: 40px;
+    z-index: 0;
+    cursor:  pointer;
+    background: rgba(var(--color-primary-rgb),0.3);
+    box-shadow: var(--card-primary-shadow);
+    transform: rotate(-45deg);
+    transition: transform 0.3s ease-in-out, scale 0.4s ease-in-out;
+}
+#about .skill:hover{
+    z-index: 1;
+    transform: rotate(0deg) scale(2);
+}
+#about .skill__logo > img{
+    object-fit: contain;
+    filter: grayscale(100%);
+    filter: grayscale(1);
+}
+#about .card__ui-item{
+    max-width: 250px;
+    position: absolute;
+    bottom: -10px;
+    z-index: 0;
+    left: 30px;
+}
+.abc{
+    position: relative;
+    left: 50px;
+}
+/* Responsiveness*/
+
+@media (max-width:768px){
+    #about .section__wrapper {
+        grid-template-columns: 100%;
+        gap: 0px;
+    }
+    #about .left-column{
+        padding-top: 120px;
+    }
+    #about .right-column{
+        padding: 10px;
+        padding-bottom: 30px;
+    }
+    
+    .abc{
+        position: relative;
+        bottom: 50px;
+        left: 30px;
+    }
+    #about .card__ui-item{
+        max-width: 250px;
+        position: absolute;
+        bottom: -10px;
+        z-index: 0;
+        left: 100px;
+        top: 60px;
+    }
+    #about .skill{
+        
+        bottom: 95px;
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        margin: 2px;
+        position: relative;
+        left: -0px;
+        z-index: 0;
+        cursor:  pointer;
+        background: rgba(var(--color-primary-rgb),0.3);
+        box-shadow: var(--card-primary-shadow);
+        transform: rotate(-45deg);
+        transition: transform 0.3s ease-in-out, scale 0.4s ease-in-out;
+    }
+} 
