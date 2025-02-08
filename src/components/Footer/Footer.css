@@ -50,4 +50,7 @@ footer .copyright h3{
     footer .nav{
         flex-direction: column;
     }
+    footer .social__handles__container{
+        justify-self: center;
+    }
 }

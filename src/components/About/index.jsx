@@ -30,12 +30,7 @@ const About = () => {
             I am <span className="color__primary">ESWARAN JM,</span>
           </h1>
           <p className="text__muted description">
-          A Computer Science Engineer skilled in coding,
-          algorithms, frameworks, and OOPs concepts. Experienced in
-          developing interactive projects, including IoT-based solutions
-          and a personal portfolio website. Proactive problem-solver with
-          hands-on experience in full-stack web development and a
-          passion for learning new technologies.
+          A Computer Science Engineer with a strong foundation in software development, proficient in HTML, CSS, JavaScript, MySQL, and Python. Experienced in building interactive projects such as Smart Human-Computer Interaction and IoT-based hand gesture control systems. A proactive problem-solver and collaborative team player with hands-on experience in full-stack web development through an internship at Stigmata Techno Solutions. Passionate about learning emerging technologies and delivering innovative solutions.
           </p>
         </div>
       </div>

@@ -183,7 +183,7 @@ export const contactInfo = [
   
   {
     name: "WhatsApp",
-    value: "+91 7358757755",
+    value: "+917358757755",
     link: "https://wa.link/erzlk9",
     icon: whatsappicon,
     btnIcon: <BsWhatsapp />,
@@ -215,8 +215,8 @@ export const credentials = [
   },
   {
     name:"B.E Computer Science",
-    at:"- SRM Valliammai Engineering collage (2020-2024)",
-    title: "Collage",
+    at:"- SRM Valliammai Engineering college (2020-2024)",
+    title: "College",
     icon: < IoSchoolOutline />,
     color: "blueviolet",
     colorRGB: "138, 43, 226",

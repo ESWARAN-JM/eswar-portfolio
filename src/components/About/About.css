@@ -46,7 +46,7 @@
     margin: 2px;
     position: relative;
     left: 10px;
-    bottom: 40px;
+    bottom: 20px;
     z-index: 0;
     cursor:  pointer;
     background: rgba(var(--color-primary-rgb),0.3);
@@ -71,8 +71,9 @@
     left: 30px;
 }
 .abc{
-    position: relative;
-    left: 50px;
+    text-align: center;
+    margin-bottom: -20px;
+    
 }
 /* Responsiveness*/
 
@@ -91,20 +92,19 @@
     
     .abc{
         position: relative;
-        bottom: 50px;
-        left: 30px;
+        top: -70px;
     }
     #about .card__ui-item{
         max-width: 250px;
         position: absolute;
         bottom: -10px;
         z-index: 0;
-        left: 100px;
+        left: 50px;
         top: 60px;
     }
     #about .skill{
         
-        bottom: 95px;
+        bottom: 85px;
         width: 60px;
         height: 60px;
         border-radius: 10px;
