@@ -3,15 +3,11 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { IoSchoolOutline } from "react-icons/io5";
 import { LiaSchoolSolid } from "react-icons/lia";
 import { MdOutlineEmail } from "react-icons/md";
-import { RiMessengerLine } from "react-icons/ri";
 import { BsWhatsapp } from "react-icons/bs";
 import {
   project1,
   project2,
   project3,
-  project4,
-  project5,
-  project6,
   python,
   node,
   mangodb,
@@ -23,7 +19,6 @@ import {
   react,
   SQL,
   emailicon,
-  messengericon,
   whatsappicon,
 } from "./assets";
 

@@ -3,10 +3,15 @@ import Logo from "../../assets/Logo";
 import { FaTimes } from "react-icons/fa";
 import { menu } from "../../data"; 
 import { Link,  animateScroll as scroll } from "react-scroll";
-import { FaArrowUpRightFromSquare, FaBarsStaggered} from "react-icons/fa6";
+import { FaArrowUpRightFromSquare, FaLink, FaBarsStaggered} from "react-icons/fa6";
 import { useState } from "react";
 
+  
+
 const Navbar = () => {
+
+  
+
   const [showSidebar,setShowSidebar] = useState(false);
    return (
     <nav className="card flex__center navbar">
@@ -17,6 +22,14 @@ const Navbar = () => {
             />)}
         <div className="flex__center logo" onClick={()=>scroll.scrollToTop({duration:500})}>
             <Logo/>
+        </div>
+        <div className="flex__center buttons__wrapper">
+            <a   href="./ESWARAN_CV.pdf" target="_blank" alt="my cv" rel="noopener noreferrer" className="btn flex__center cv__btn">
+             View CV
+              <div className="flex__center icon">
+                <FaLink />
+              </div>
+            </a>
         </div>
         <aside className={`flex__center sidebar ${showSidebar && "visible"}`}>
             <div className="flex sidebar__top">
