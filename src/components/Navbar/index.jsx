@@ -51,6 +51,7 @@ const Navbar = () => {
                        className="tab"
                        activeClass="btn__shine"
                        key={index} 
+                       onClick={()=> setShowSidebar(false)}
                     >
                        {list.name}
                     </Link>
