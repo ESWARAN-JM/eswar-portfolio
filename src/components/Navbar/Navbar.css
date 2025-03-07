@@ -138,10 +138,12 @@
       align-items: stretch;
       justify-content: flex-start;
       flex-direction: column;
-      gap: 0px;
+      gap: 20px;
+      margin-top: 30px;
     }
     .navbar .menu,
     .navbar .close__btn{
       display:flex;
     }
   }
+

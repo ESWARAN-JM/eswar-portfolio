@@ -16,10 +16,10 @@ const Footer = () => {
                key={index}
                >
                    {list.name}
-               </Link>
+               </Link> 
           ))}
-        </ul> 
-        <SocialHandles/>
+        </ul> <div className="social"><SocialHandles />
+        </div>
         <div className="copyright">
           <h3>Copyright &copy; All right reserved - | 2025</h3>
           <p className="text__muted">Built with love by Eswar</p>

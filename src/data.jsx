@@ -36,7 +36,7 @@ export const projects = [
     title: "Personal Portfolio",
     image: project1,
     category: "Web",
-    description: `Developed a responsive and visually appealing portfolio website using React.js to showcase my skills, projects, and achievements, ensuring a seamless user experience.`,
+    description: `Developed a responsive and visually appealing React.js portfolio with a seamless user experience.`,
     demoLink: "https://google.com/",
     stacks: [
       {
@@ -46,10 +46,6 @@ export const projects = [
       {
         name: "JavaScript",
         logo: javascript,
-      },
-      {
-        name: "Tailwind",
-        logo: tailwind,
       }
     ],
   },
@@ -57,7 +53,7 @@ export const projects = [
     title: "E-Commerce Application",
     image: project2,
     category: "Web",
-    description: `Developed a dynamic and user-friendly e-commerce website using the MERN stack (MongoDB, Express.js, React.js, and Node.js) with features for product management, user authentication, and secure payment integration.`,
+    description: `Developed a dynamic e-commerce website using MERN and Redux with user authentication and secure payments.`,
     demoLink: "https://google.com/",
     stacks: [
      
@@ -76,6 +72,10 @@ export const projects = [
       {
         name: "NodeJs",
         logo: node,
+      },
+      {
+        name: "Tailwind",
+        logo: tailwind,
       }
     ],
   },
@@ -84,10 +84,7 @@ export const projects = [
     image: project3,
     category: "Project",
     description: `Developed a system to enhance user interaction by
-converting laptop camera modules into gesture sensors.
-Enabled cursor control through real-time gesture
-detection using computer vision techniques, minimizing
-reliance on traditional input devices.`,
+converting laptop camera modules into gesture sensors.`,
     demoLink: "https://google.com/",
     stacks: [
       
@@ -203,7 +200,7 @@ export const socialHandles = [
 export const credentials = [
   {
     name: "Full Stack Development",
-    at: "- Stigmata Techno Solutions (August 2022)",
+    at: "- Stigmata Techno Solutions",
     title: "Internship",
     icon: <GoCodeReview />,
     description: `Worked on developing and maintaining web applications, contributing to both front-end and back-end tasks. Gained experience in coding, debugging, and API integration.`,
