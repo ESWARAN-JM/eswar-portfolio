@@ -5,7 +5,12 @@ const ProjectCard = ({ project }) => {
   const { id, title, category, image, description, stacks } = project;
 
   return (
-    <Link to={`/projects/${id}`} className="card-link">
+    <Link 
+      to={`/projects/${id}`} 
+      state={{ fromProjects: true }}
+      className="card-link"
+      onClick={() => sessionStorage.setItem("fromProjects", "true")}
+    >
       <div className="card project__card">
         <div className="project__card-top">
           <div className="picture">

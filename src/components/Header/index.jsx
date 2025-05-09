@@ -34,12 +34,10 @@ const Header = () => {
           <CodeBlock language={"javascript"} code={code} />
           <div>
             <p className="text__muted description">
-              Motivated Computer Science Engineer  with expertise in coding,
-              algorithms, frameworks, and object-oriented programming (OOP).
-              Experienced in developing interactive projects and a personal
-              portfolio website. A proactive problem-solver with hands-on
-              experience in full-stack web development and a strong passion for
-              learning emerging technologies.
+              Motivated and detail-oriented recent graduate with a strong foundation in full stack development for both
+web and mobile applications. Seeking an entry-level position where I can contribute to building responsive
+frontends, scalable backends, and maintainable codebases that enhance user experience and support
+business objectives.
             </p>
 
             <SocialHandles />

@@ -8,10 +8,12 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import ProjectDetails from "./pages/ProjectDetails";
+import ScrollToProjects from "./components/ScrollToProjects";
 
 const App = () => {
   return (
     <BrowserRouter basename="/eswar-portfolio">
+      <ScrollToProjects/>
       <Navbar />
       <Routes>
         <Route path="/" element={
@@ -26,6 +28,7 @@ const App = () => {
           </>
         } />
         <Route path="/projects/:id" element={<ProjectDetails />} />
+        
       </Routes>
     </BrowserRouter>
   );

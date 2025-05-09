@@ -223,6 +223,30 @@
   color: red;
 }
 
+/* Loading Spinner */
+.loading-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  color: var(--color-primary);
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-align: center;
+  z-index: 15;
+  animation: spin 1.2s linear infinite; 
+}
+
+/* Spinner Rotation */
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+
 @keyframes fadeIn {
   from {
     opacity: 0;

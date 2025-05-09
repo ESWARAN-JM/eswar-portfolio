@@ -1,7 +1,6 @@
 import Hole from "../../ui/Hole";
 import "./About.css";
 import {skills } from "../../data";
-import CardUi from "../../assets/CardUi";
 const About = () => {
   return (
     <section id='about'>
@@ -22,7 +21,7 @@ const About = () => {
               </div>
             ))}
           </div>
-          <CardUi className="card__ui-item" color={"var(--color-primary)"}/>
+          
         </div>
         <div className="column right-column">
           
@@ -30,7 +29,7 @@ const About = () => {
             I am <span className="color__primary">ESWARAN JM,</span>
           </h1>
           <p className="text__muted description">
-          A Computer Science Engineer with a strong foundation in software development, proficient in HTML, CSS, JavaScript, MySQL, and Python. Experienced in building interactive projects such as Smart Human-Computer Interaction and IoT-based hand gesture control systems. A proactive problem-solver and collaborative team player with hands-on experience in full-stack web development through an internship at Stigmata Techno Solutions. Passionate about learning emerging technologies and delivering innovative solutions.
+          A Computer Science Engineer with a strong foundation in full stack development, proficient in HTML, CSS, JavaScript, React.js, Java, Node.js, and MySQL. Experienced in building real-world projects like e-commerce platforms and mobile apps using Flutter, Firebase, and Google Cloud. A proactive problem-solver and collaborative team player with internship experience at Stigmata Techno Solutions. Passionate about building scalable applications and exploring modern tools and frameworks.
           </p>
         </div>
       </div>
