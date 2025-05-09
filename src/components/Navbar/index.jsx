@@ -24,7 +24,7 @@ const Navbar = () => {
             <Logo/>
         </div>
         <div className="flex__center buttons__wrapper">
-            <a   href="./ESWARAN_CV.pdf" target="_blank" alt="my cv" rel="noopener noreferrer" className="btn flex__center cv__btn">
+            <a   href="/eswar-portfolio/ESWARAN_CV.pdf" target="_blank" alt="my cv" rel="noopener noreferrer" className="btn flex__center cv__btn">
              View CV
               <div className="flex__center icon">
                 <FaLink />
