@@ -11,7 +11,7 @@
     width: 90%;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 90%;
     transform: translate(-50%,-50%);
     z-index: -1;
 }
@@ -166,7 +166,7 @@ textarea:focus{
 @media (max-width:1000px){
     #contact .pyramid__container{
         width: 70%;
-        top: 30%;
+        top: 60%;
         transform: translate(-50%, -30%);
     }
 }

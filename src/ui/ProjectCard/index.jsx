@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import "./ProjectCard.css";
 
@@ -11,10 +12,19 @@ const ProjectCard = ({ project }) => {
       className="card-link"
       onClick={() => sessionStorage.setItem("fromProjects", "true")}
     >
-      <div className="card project__card">
+      <motion.div 
+        className="card project__card"
+        whileHover={{ y: -10 }}
+        transition={{ duration: 0.3 }}
+      >
         <div className="project__card-top">
           <div className="picture">
-            <img src={image} alt={title} />
+            <motion.img 
+              src={image} 
+              alt={title}
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.3 }}
+            />
           </div>
         </div>
         <div className="project__card-bottom">
@@ -35,13 +45,18 @@ const ProjectCard = ({ project }) => {
           </p>
           <div className="flex__center stacks">
             {stacks.map((stack, index) => (
-              <div className="stack" key={index}>
+              <motion.div 
+                className="stack" 
+                key={index}
+                whileHover={{ scale: 2 }}
+                transition={{ duration: 0.2 }}
+              >
                 <img src={stack.logo} alt={stack.name} />
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
     </Link>
   );
 };
