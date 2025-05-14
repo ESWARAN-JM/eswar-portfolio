@@ -32,6 +32,7 @@
 }
 
 #about .skills__container {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,6 +55,7 @@
 }
 
 #about .skill {
+    position: relative;
     width: 60px;
     height: 60px;
     border-radius: 10px;
@@ -79,6 +81,53 @@
 .abc {
     text-align: center;
     margin-bottom: -20px;
+}
+
+.skill-tooltip {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 10;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.skill-tooltip::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.8);
+}
+
+.skill__logo img {
+  transition: filter 0.3s ease;
+}
+
+.skill:hover .skill__logo img {
+  filter: grayscale(0) brightness(1.2);
+}
+
+/* Pulse animation for the container */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(var(--color-primary-rgb), 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(var(--color-primary-rgb), 0); }
+  100% { box-shadow: 0 0 0 0 rgba(var(--color-primary-rgb), 0); }
+}
+
+.skills__container:hover {
+  animation: pulse 2s infinite;
 }
 
 /* Responsiveness */

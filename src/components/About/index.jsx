@@ -26,22 +26,31 @@ const itemVariants = {
   }
 };
 
-const skillVariants = {
-  hidden: { rotate: -45, scale: 0 },
+const skillItem = {
+  hidden: { 
+    rotate: -45,
+    scale: 0,
+    y: 20
+  },
   visible: (i) => ({
     rotate: -45,
     scale: 1,
+    y: 0,
     transition: {
       delay: i * 0.1,
-      duration: 0.5,
+      duration: 0.6,
       type: "spring",
-      stiffness: 100
+      stiffness: 100,
+      damping: 10
     }
   }),
   hover: {
     rotate: 0,
     scale: 2,
-    transition: { duration: 0.3 }
+    transition: { 
+      duration: 0.3,
+      ease: "easeOut"
+    }
   }
 };
 
@@ -60,27 +69,63 @@ const About = () => {
           <motion.h2 className="shine abc" variants={itemVariants}>
             About Me
           </motion.h2>
-          <motion.div className="skills__container" variants={itemVariants}>
-            {skills.map((skills, index) => (
-              <div className="flex skill__group" key={index}>
-                {skills.data.map((list, key) => (
+          
+          <div className="skills__container">
+            {skills.map((skillGroup, index) => (
+              <motion.div 
+                className="flex skill__group" 
+                key={index}
+                variants={itemVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
+                {skillGroup.data.map((skill, key) => (
                   <motion.div 
                     className="blur__overlay flex__center skill" 
                     key={key}
-                    variants={skillVariants}
-                    custom={key}
                     initial="hidden"
                     animate="visible"
                     whileHover="hover"
+                    custom={key}
+                    style={{ 
+                      backgroundColor: `rgba(${skillGroup.colorRGB || '37, 99, 235'}, 0.3)`,
+                      boxShadow: `0 0 15px rgba(${skillGroup.colorRGB || '37, 99, 235'}, 0.5)`
+                    }}
                   >
-                    <div className="skill__logo">
-                      <img src={list.logo} alt="" />
-                    </div>
+                    <motion.div 
+                      className="skill__logo"
+                      animate={{
+                        rotate: 0,
+                        transition: { duration: 0.3 }
+                      }}
+                      whileHover={{ 
+                        rotate: 360,
+                        transition: { duration: 0.8 }
+                      }}
+                    >
+                      <img 
+                        src={skill.logo} 
+                        alt={skill.skill} 
+                        style={{ filter: "grayscale(0)" }}
+                      />
+                    </motion.div>
+                    <motion.div
+                      className="skill-tooltip"
+                      initial={{ opacity: 0 }}
+                      whileHover={{ 
+                        opacity: 1,
+                        y: -40,
+                        transition: { delay: 0.2 }
+                      }}
+                    >
+                      {skill.skill}
+                    </motion.div>
                   </motion.div>
                 ))}
-              </div>
+              </motion.div>
             ))}
-          </motion.div>
+          </div>
         </div>
         <motion.div className="column right-column" variants={itemVariants}>
           <motion.h1 className="title" initial={{ x: 50 }} animate={{ x: 0 }}>
