@@ -1,35 +1,10 @@
-import { motion } from "framer-motion";
 import "./Contact.css";
 import Pyramid from "../../ui/Pyramid";
-import { contactInfo } from "../../data";
+import {contactInfo} from "../../data";
 import { BsFillSendFill } from "react-icons/bs";
 import SocialHandles from "../../ui/SocialHandles";
 import React from "react";
 import Swal from 'sweetalert2'
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.2
-    }
-  }
-};
-
-const itemVariants = {
-  hidden: { y: 30, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut"
-    }
-  }
-};
-
 const Contact = () => {
   const [result, setResult] = React.useState("");
 
@@ -49,11 +24,11 @@ const Contact = () => {
 
     if (data.success) {
       Swal.fire({
-        title: "Submitted!",
-        text: "Message Sent Successfully!",
-        icon: "success"
-      })
-      event.target.reset();;
+      title: "Submitted!",
+      text: "Message Sent Successfully!",
+      icon: "success"
+    })
+    event.target.reset();;
     } else {
       console.log("Error", data);
       setResult(data.message);
@@ -66,25 +41,14 @@ const Contact = () => {
         <div className="pyramid__container">
           <Pyramid/>
         </div>
-        <motion.div 
-          className="contact__group"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <motion.div variants={itemVariants}>
-            <h3 className="title shine">
+        <div className="contact__group">
+          <div>
+            <h3 className="title shine" >
               Contact Me
             </h3>
             <div className="flex contact__options">
-              {contactInfo.map((contact, index) => (
-                <motion.article 
-                  className="flex option" 
-                  key={index}
-                  whileHover={{ y: -5 }}
-                  transition={{ duration: 0.2 }}
-                >
+              {contactInfo.map((contact,index)=>(
+                <article className="flex option" key={index}>
                   <div className="contact__icon">
                     <img src={contact.icon} alt="" />
                   </div>
@@ -95,42 +59,29 @@ const Contact = () => {
                     </div>
                     <a href={contact.link} target="_blank" className="flex__center btn">
                       <span className="btn__shine text">Message</span>
-                      <div className="flex__center icon" style={{ background: contact.color }}>
+                      <div className="flex__center icon" style={{background: contact.color }}>
                         {contact.btnIcon}
                       </div>
                     </a>
                   </div>
-                </motion.article>
+                </article>
               ))}
             </div>
             <div className="social">
-              <SocialHandles />
-            </div>
-          </motion.div>
-          <motion.form 
-            onSubmit={onSubmit}
-            variants={itemVariants}
-            initial={{ x: 50 }}
-            whileInView={{ x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+            <SocialHandles /></div>
+          </div>
+          <form onSubmit={onSubmit}>
             <input type="text" placeholder="Your full name" name="name" required />
             <input type="email" placeholder="Your email" name="email" required />
             <textarea name="message" rows={7} placeholder="Your message"></textarea>
-            <motion.button 
-              type="submit" 
-              className="btn flex__center submit__btn"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <div className="icon">
-                <BsFillSendFill />
-              </div>
-              <span>Send Now</span>
-            </motion.button>
-          </motion.form>
-        </motion.div>
+            <button type="submit" className="btn flex__center submit__btn">
+               <div className="icon">
+               <BsFillSendFill />
+               </div>
+               <span>Send Now</span>
+            </button>
+          </form>
+        </div>
       </div>
     </section>
   );

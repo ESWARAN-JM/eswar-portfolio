@@ -1,5 +1,5 @@
 .project-details-container {
-  padding: 100px 20px 50px;
+  padding: 30px 20px 50px;
   max-width: 1000px;
   margin: 0 auto;
   color: var(--color-text);
@@ -237,14 +237,8 @@
   border-radius: 50px;
   text-align: center;
   z-index: 15;
-  animation: spin 1.2s linear infinite; 
 }
 
-/* Spinner Rotation */
-@keyframes spin {
-  0% { transform: translate(-50%, -50%) rotate(0deg); }
-  100% { transform: translate(-50%, -50%) rotate(360deg); }
-}
 
 
 @keyframes fadeIn {

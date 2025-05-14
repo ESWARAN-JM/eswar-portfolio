@@ -14,10 +14,11 @@ const App = () => {
   return (
     <BrowserRouter basename="/eswar-portfolio">
       <ScrollToProjects/>
-      <Navbar />
+      
       <Routes>
         <Route path="/" element={
           <>
+          <Navbar />
             <Header />
             <About />
             <Credentials />

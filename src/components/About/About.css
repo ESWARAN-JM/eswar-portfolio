@@ -39,11 +39,11 @@
     padding: 30px 20px;
     margin-top: 60px;
     border-radius: 20px;
-    background: rgba(0, 0, 0, 0.2); /* Light transparent black background */
-    backdrop-filter: blur(12px); /* Background blur */
+    background: rgba(0, 0, 0, 0.2); 
+    backdrop-filter: blur(12px); 
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(73, 140, 255, 0.5); /* Light blue border */
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    border: 1px solid rgba(73, 140, 255, 0.5); 
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); 
     width: 100%;
     box-sizing: border-box;
 }
@@ -61,7 +61,7 @@
     border-radius: 10px;
     margin: 4px;
     cursor: pointer;
-    background: rgba(var(--color-primary-rgb), 0.3); /* Primary color with opacity */
+    background: rgba(var(--color-primary-rgb), 0.3);
     box-shadow: var(--card-primary-shadow);
     transform: rotate(-45deg);
     transition: transform 0.3s ease-in-out, scale 0.4s ease-in-out;
@@ -69,7 +69,7 @@
 
 #about .skill:hover {
     z-index: 1;
-    transform: rotate(0deg) scale(2); /* Hover effect for skills */
+    transform: rotate(0deg) scale(2); 
 }
 
 #about .skill__logo > img {
@@ -152,17 +152,17 @@
     }
 
     #about .skills__container {
-        margin-top: 20px; /* Adjusts the position on mobile */
+        margin-top: 20px; 
         padding: 20px;
-        width: 90%; /* Make the container smaller for better mobile fit */
-        margin-left: auto; /* Center the container */
-        margin-right: auto; /* Center the container */
+        width: 90%; 
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #about .skill {
-        width: 50px; /* Adjust the size for mobile */
-        height: 50px; /* Adjust the size for mobile */
-        margin: 5px; /* Slightly larger margin for spacing */
+        width: 50px; 
+        height: 50px;
+        margin: 5px; 
         position: relative;
         left: 0;
         z-index: 0;

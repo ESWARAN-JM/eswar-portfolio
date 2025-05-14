@@ -14,8 +14,6 @@ const ProjectCard = ({ project }) => {
     >
       <motion.div 
         className="card project__card"
-        whileHover={{ y: -10 }}
-        transition={{ duration: 0.3 }}
       >
         <div className="project__card-top">
           <div className="picture">

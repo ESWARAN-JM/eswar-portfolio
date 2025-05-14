@@ -1,62 +1,50 @@
 import { motion } from "framer-motion";
-import "./ServiceCard.css";
+import "./ServiceCard.css"; 
 
-const ServiceCard = ({title, name, at, description, icon, color, colorRGB}) => {
-  const cardVariants = {
-    rest: { transform: "rotate3d(0, 0, 0, 0deg)" },
-    hover: { transform: "rotate3d(1, 1, 0, 30deg)" }
-  };
-
-  const ballVariants = {
-    rest: { transform: "translate3d(0,0,100px)" },
-    hover: { 
-      transform: "translate3d(0,0,120px)",
-      transition: { duration: 0.5 }
+const ServiceCard = ({ title, name, at, description, icon, color, colorRGB }) => {
+  const containerVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
     }
   };
 
   return (
-    <motion.div 
-      className="blur__overlay flex service__card"
-      style={{"--color-primary": color, "--color-primary-rgb":colorRGB}}
-      variants={cardVariants}
-      initial="rest"
-      whileHover="hover"
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-50px" }}
+      variants={containerVariants}
     >
-      <div className="service__card-top">
-        <motion.div className="ball ball1" variants={ballVariants} />
-        <motion.div 
-          className="ball ball2" 
-          variants={ballVariants}
-          transition={{ delay: 0.1 }}
-        />
-        <motion.div 
-          className="ball ball3" 
-          variants={ballVariants}
-          transition={{ delay: 0.2 }}
-        />
-        <motion.div 
-          className="ball ball4" 
-          variants={ballVariants}
-          transition={{ delay: 0.3 }}
-        />
-        <motion.div 
-          className="ball ball5 flex__center"
-          variants={ballVariants}
-          transition={{ delay: 0.4 }}
-        >
-          {icon}
-        </motion.div>
-      </div>
-      <div className="service__card-middle">
-        <h2 className="title">
+     
+      <div 
+        className="blur__overlay flex service__card"
+        style={{
+          "--color-primary": color,
+          "--color-primary-rgb": colorRGB
+        }}
+      >
+        <div className="service__card-top">
+          <div className="ball ball1"></div>
+          <div className="ball ball2"></div>
+          <div className="ball ball3"></div>
+          <div className="ball ball4"></div>
+          <div className="ball ball5 flex__center">{icon}</div>
+        </div>
+
+        <div className="service__card-middle">
+          <h2 className="title">
             <span className="g-text">{title}</span>
-        </h2>
-        <h3 className="name">{name}</h3>
-        <p className="text__muted description">{description}</p>
-      </div>
-      <div className="service__card-bottom">
-        <p className="at">{at}</p>
+          </h2>
+          <h3 className="name">{name}</h3>
+          <p className="text__muted description">{description}</p>
+        </div>
+
+        <div className="service__card-bottom">
+          <p className="at">{at}</p>
+        </div>
       </div>
     </motion.div>
   );
